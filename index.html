@@ -1,82 +1,123 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selamat Hari Raya Idul Fitri</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
-    <style>
-        body {
-            text-align: center;
-            background-image: url('https://od.lk/s/NjZfNTI1NjA5MjFf/background.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .container {
-            margin-top: 50px;
-        }
-        img {
-            width: 300px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
-        }
-        h1 {
-            font-family: 'Pacifico', sans-serif;
-            color: #333;
-        }
-        p {
-            font-family: 'Caveat', sans-serif;
-            color: #666;
-            font-size: 18px;
-            border: 2px solid #ccc;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 20px auto;
-            max-width: 80%;
-        }
-        button {
-            margin-top: 20px;
-            background-color: #0A4157;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    <meta charset="UTF-8">
+    <title>Thank you card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+
+    html {
+        background: #b0bff5;
+        height: 100%;
+        width: 100%;
+    }
+
+    body {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #envelope {
+        margin: 100px auto 0;
+        position: relative;
+        width: 0;
+        height: 0;
+        z-index: 0;
+        border-style: solid;
+        border-width: 0 150px 100px 150px;
+        border-color: transparent transparent #8a4a80 transparent;
+        box-shadow: 0 100px 0 0 #8a4a80,
+            0 150px 90px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    #envelope:after,
+    #envelope:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 100px;
+        border-style: solid;
+    }
+
+    #envelope:after {
+        width: 0;
+        height: 0;
+        left: 0;
+        border-width: 100px 150px 100px 0;
+        border-color: transparent #c754ba transparent transparent;
+    }
+
+    #envelope:before {
+        width: 210px;
+        height: 180px;
+        left: -150px;
+        border-width: 200px 0 0 300px;
+        border-color: transparent transparent transparent #f759e0;
+    }
+
+    #envelope:hover #card {
+        top: -20px;
+    }
+
+    #card {
+        width: 260px;
+        height: 220px;
+        position: absolute;
+        top: 70px;
+        left: -130px;
+        z-index: -1;
+        background: #dcdcdc;
+        border-radius: 5px;
+        transition: top 0.5s ease-in-out;
+        font: bold 1em/0.9em 'Open Sans Condensed', sans-serif;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 125px 0 60px 0;
+        color: black;
+        line-height: 1em;
+    }
+
+    #card p {
+        width: 150px;
+        margin: 0 auto;
+
+    }
+
+    #button {
+        top: 25px;
+        left: 90px;
+        right: -25px;
+        height: 50px;
+        width: 100px;
+
+        overflow: hidden;
+        position: absolute;
+    }
     </style>
 </head>
+
+
 <body>
-    <div class="container">
-        <img src="https://od.lk/s/NjZfNTI1NTcwMThf/SKY.png" alt="Hari Raya Idul Fitri">
-        <button id="audioButton">Putar Audio</button>
-        <h1>Selamat Hari Raya Idul Fitri</h1>
-        <p>Kepada Chintya Awaliyah Kakak tingkat Ilkom, saya sebagai adik tingkat ingin mengucapkan : </p>
-        <p>Minal aidzin wa faidzin, Mohon maaf lahir dan batin.</p>
-        <p>Maafin yaa kalo aku punya banyak salah sama kamu, mulai dari buat kamu kesel, jengkel, marah, gamood. Mohon dimaafin yaa 🙏🏻🙏🏻🙏🏻</p>
-        <p>Aku juga mau ngucapin Terima Kasih karena kamu uda maau jadi temen aku, mau temenin aku pas dulu masih maba hehe 😁</p>
-        <audio id="myAudio">
-            <source src="https://od.lk/s/NjZfNTI1NTU0MDRf/Backsound%20-%20Idul%20Fitri%202024.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <img src="https://od.lk/s/NjZfNTI1NjI4MTlf/IMG-20240129-WA0002.jpg" alt="Hari Raya Idul Fitri">
+    <div id="envelope">
+        <div id="card">
+            <p>Love Youu<br> Cayangkuuu ❤️</p>
+            <div id="button">KLIK DISINI &hearts;</div>
+        </div>
     </div>
-
-     <script>
-        var audio = document.getElementById("myAudio");
-        var audioButton = document.getElementById("audioButton");
-
-        audioButton.addEventListener("click", function() {
-            if (audio.paused) {
-                audio.play();
-                audioButton.textContent = "Stop Audio";
-            } else {
-                audio.pause();
-                audioButton.textContent = "Clik on Me";
-            }
-        });
-    </script>
+    <script src="./script.js"></script>
 </body>
+
 </html>
